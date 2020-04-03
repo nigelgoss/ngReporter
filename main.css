@@ -28,5 +28,5 @@ section + section { margin-top:10px; }
 #datagrid > div:nth-of-type(2) div:nth-of-type(2) { text-align:right; }
 #datagrid table { width:100%; font-size:0.7em; background-color:#EEEEEE; border-collapse:collapse; }
 #datagrid table td { border:1px solid lightgrey; }
-#datagrid table thead { background-color:#dce4f9; }
-#datagrid table tfoot { background-color:#dce4f9; }
+#datagrid table thead { background-color:#dce4f9; font-weight:bold; text-align:center; }
+#datagrid table tfoot { background-color:#dce4f9; font-weight:bold; }
