@@ -13,13 +13,13 @@
 				f.style.display = (f.style.display === "none") ? "flex" : "none";
 				var b = document.querySelector("#buttonShowHide");
 				b.textContent = (f.style.display === "none") ? "⇗" : "⇙";
-			}; filtersShowHide(); filtersShowHide();
+			};
 		
 		</script>
 	
 	</head>
 	
-	<body>
+	<body onload="filtersShowHide(); filtersShowHide();">
 	
 		<section id="menu">
 			
@@ -48,7 +48,7 @@
 			
 			<div>			
 				<div>ECS Attendance Analysis</div>
-				<div>iPanel <button id="buttonShowHide" onclick="filtersShowHide();">-</button></div>
+				<div>iPanel <button id="buttonShowHide" onclick="filtersShowHide();"></button></div>
 			</div>
 		
 			<div id="filtersShowHide">
