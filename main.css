@@ -10,7 +10,7 @@ section + section { margin-top:10px; }
 #menu > div:nth-of-type(2) div:nth-of-type(1) { background-color:#b84a14; }
 
 #filters { border-radius:10px; padding:5px; background-color:#EEEEEE; }
-#xxxxxxxfilters > div { display:flex; }
+#filters > div:nth-of-type(1) { display:flex; }
 #filters > div:nth-of-type(1) div { flex:1 1 auto; color:blue; font-weight:bold; }
 #filters > div:nth-of-type(1) div:nth-of-type(2) { text-align:right; }
 #filters > div:nth-of-type(2) { display:grid; background-color:aliceblue; grid-template-columns:auto auto auto; }
