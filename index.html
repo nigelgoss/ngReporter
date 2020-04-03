@@ -4,19 +4,16 @@
 
 	<head>
 	
-		<style src="main.css" />
+		<link rel="stylesheet" href="main.css" />
 		
 		<script>
 		
 			function filtersShowHide () {
-			
 				var f = document.querySelector("#filtersShowHide");
 				f.style.display = (f.style.display === "none") ? "flex" : "none";
-				
 				var b = document.querySelector("#buttonShowHide");
 				b.textContent = (f.style.display === "none") ? "+" : "-";
-				
-			}
+			};
 		
 		</script>
 	
