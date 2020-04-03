@@ -7,7 +7,7 @@ section + section { margin-top:10px; }
 #menu > div:nth-of-type(1) div { flex:1 1 auto; color:white; background-color:#1972a9; }
 #menu > div:nth-of-type(1) div:nth-of-type(2) { text-align:right; }
 #menu > div:nth-of-type(2) div { flex:1 1 auto; color:white; background-color:#363636; text-align:center; }
-#menu > div:nth-of-type(2) div:nth-of-type(1) { background-color:#b84a14; }
+#menu > div:nth-of-type(2) div:nth-of-type(1) { padding:5px; background-color:#b84a14; }
 
 #filters { border-radius:10px; padding:5px; background-color:#EEEEEE; }
 #filters > div { display:flex; flex-wrap:wrap; align-items:center; }
