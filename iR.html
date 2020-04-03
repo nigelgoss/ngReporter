@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<style>
+		
+			* { box-sizing:border-box; font-family:"Trebuchet MS",serif; }
+			body { margin:0; }
+			xdiv { border: 1px solid lightgrey; padding:1px; }
+		
+			section + section { margin-top:10px; }
+		
+			#menu > div { display:flex; font-size:0.7em; }
+			#menu > div:nth-of-type(1) div { flex:1 1 auto; color:white; background-color:#1972a9; }
+			#menu > div:nth-of-type(1) div:nth-of-type(2) { text-align:right; }
+			#menu > div:nth-of-type(2) div { flex:1 1 auto; color:white; background-color:#363636; text-align:center; }
+			#menu > div:nth-of-type(2) div:nth-of-type(1) { background-color:#b84a14; }
+
+			#filters { border-radius:10px; padding:5px; background-color:#EEEEEE; }
+			#filters > div { display:flex; flex-wrap:wrap; align-items:center; }
+			#filters > div:nth-of-type(1) div { flex:1 1 auto; color:blue; font-weight:bold; }
+			#filters > div:nth-of-type(1) div:nth-of-type(2) { text-align:right; }
+			
+			#filters > div:nth-of-type(2) { display:grid; background-color:aliceblue; grid-template-rows:auto auto auto auto; }
+			
+			
+			
+			#xfilters > div:nth-of-type(2) > div { flex:0 0 250px; display:flex; }
+			#xfilters > div:nth-of-type(2) > div > div:nth-of-type(1) { flex:0 0 33%; }
+			#xfilters > div:nth-of-type(2) > div > div:nth-of-type(2) { flex:1 1 auto; }
+			
+			#filters > div:nth-of-type(3) div:nth-of-type(1) { flex:1 1 auto; }
+			#filters > div:nth-of-type(3) div:nth-of-type(1) { font-size:0.7em; }
+			#filters > div:nth-of-type(3) div:nth-of-type(2) { text-align:right; }
+			
+			#datagrid { border-radius:10px; padding:5px; }
+			#datagrid > div { display:flex; align-items:center; background-color:#1972a9; color:white; }
+			#datagrid > div:nth-of-type(1) { display:inline-block; font-weight:bold; padding:5px; border-radius:10px 10px 0 0; }
+			#datagrid > div:nth-of-type(2) div { flex:1 1 auto; }
+			#datagrid > div:nth-of-type(2) div:nth-of-type(2) { text-align:right; }
+			#datagrid table { width:100%; font-size:0.7em; background-color:#EEEEEE; border-collapse:collapse; }
+			#datagrid table td { border:1px solid lightgrey; }
+			#datagrid table thead { background-color:#dce4f9; }
+			#datagrid table tfoot { background-color:#dce4f9; }
+			
+		</style>
+		
+		<script>
+		
+			function filtersShowHide () {
+			
+				var f = document.querySelector("#filtersShowHide");
+				f.style.display = (f.style.display === "none") ? "flex" : "none";
+				
+				var b = document.querySelector("#buttonShowHide");
+				b.textContent = (f.style.display === "none") ? "+" : "-";
+				
+			}
+		
+		</script>
+	
+	</head>
+	
+	<body>
+	
+		<section id="menu">
+			
+			<div>
+				<div><img src="#" style="width:300px; height:50px;" /></div>
+				<div><img src="#" style="width:300px; height:50px;" /></div>
+			</div>
+			
+			<div>
+				<div>Home</div>
+				<div>Maternity</div>
+				<div>Waiting Lists</div>
+				<div>Analysis</div>
+				<div>Data Quality</div>
+				<div>Clinical Indicators</div>
+				<div>Reference Data</div>
+				<div>Commissioning</div>
+				<div>CSPOPS</div>
+				<div>COVID</div>
+				<div>Admin</div>
+			</div>
+			
+		</section>
+		
+		<section id="filters">
+			
+			<div>			
+				<div>ECS Attendance Analysis</div>
+				<div>iPanel <button id="buttonShowHide" onclick="filtersShowHide();">-</button></div>
+			</div>
+		
+			<div id="filtersShowHide">
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+				<div><div>Filter1</div><div><select style="width:100%;"></select></div></div>
+			</div>
+			
+			<div>			
+				<div>Data extracted at 03/04/2020 13:00:29 and iReporter updated at 03/04/2020 13:48:05</div>
+				<div><button>Submit</button></div>
+			</div>
+		
+		</section>
+		
+		<section id="datagrid">
+					
+			<div>Summary</div>
+			
+			<div>			
+				<div>Number of current inpatients</div>
+				<div>
+					<img src="#" style="width:30px; height:30px;" />
+					<img src="#" style="width:30px; height:30px;" />
+					<img src="#" style="width:30px; height:30px;" />
+				</div>
+			</div>
+		
+			<table>
+				<thead>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+				</thead>
+				<tbody>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+				</tbody>
+				<tfoot>
+					<tr><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+				</tfoot>
+			</table>
+			
+		</section>
+	
+	</body>
+	
+</html>
